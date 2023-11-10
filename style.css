@@ -1,0 +1,336 @@
+* {
+    padding: 0%;
+    box-sizing: border-box;
+    margin: 0%;
+} 
+
+footer {
+    min-height: 20vh;
+    background-color: #000;
+
+
+}
+
+/* main {
+    /* background-image: url(./00-header-alt.jpg); */
+    /* background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 80vh; */
+  
+  /* } */ 
+
+
+  /* animacion de fondo */
+
+  body {
+    background-image: linear-gradient(to right, #364966, #a04f56);
+    background-size: 500%;
+    animation: move 7s infinite;
+  }
+  
+  @keyframes move {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* font valorant */
+
+  @font-face {
+    font-family: 'valorant'; 
+    src: url('./Recursos-valorant/Valorant_Font.ttf') format('truetype'); 
+
+  }
+  h1.font-valorant {
+    font-size: 5.4rem;
+    text-shadow: 10px 10px 50px black;
+  }
+  .font-valorant {
+    font-family: valorant;
+  }
+
+  /* animacion de los limks del navbar */
+
+
+  svg{
+    width: 16px;
+     height: 8 px;
+
+  }
+
+  #link {
+    margin: 1rem 1.5rem;
+
+  }
+  #link a {
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #d8cfcf;
+    font-size: 1.2rem;
+    position: relative;
+    
+  }
+  #link a:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2.5px;
+    width: 100%;
+    background: rgb(252, 86, 86);
+    /*animacion de derecha a izquierda*/
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  #link a:hover:after {
+    /*animacion de derecha a izquierda*/
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  /* animacion de las cards */
+  
+  .card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    background-color: rgba(255, 0, 0, 0);
+    border-color: transparent;
+  }
+  
+  .card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+  }
+  
+  .card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+  }
+  
+  .card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+  }
+  
+  .card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+  }
+  
+  .card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+  }
+  
+  .card .back .link a {
+    color: #f3f3f3;
+  }
+  
+  .card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+  }
+  
+  .card .back p {
+    letter-spacing: 1px;
+  } 
+  
+  .card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+  }
+  
+  .card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+  }
+
+/*estilos del home*/
+
+.barra {
+  background-color: black;
+  font-size: larger;
+
+}
+
+.trofeo_barra {
+  height: 35px;
+}
+
+
+
+.primerTituloHome {
+  font-family: arial, georgia, sans-serif;
+  font-size: 480%;
+  font-weight: 600;
+  color: #ff4655;
+  width: 100%;
+  text-align: left;
+  margin-bottom: -2rem;
+  position: relative;
+  z-index: 100;
+  text-shadow: 2px 1px 2px #ffffff;
+
+}
+
+.segundoTituloHome {
+  font-weight: 600;
+  color: #0b1c36;
+  text-shadow: 2px 1px 2px #b1dcf5;
+}
+
+.tercerTituloHome {
+  font-weight: 300;
+  color: #462929;
+  text-shadow: 2px 1px 2px #0f0f0f;
+}
+
+.cuartoTituloHome {
+  font-weight: 150;
+  color: #faeff6;
+  text-shadow: 2px 3px 2px #0e0d0d;
+}
+
+.metadata {
+
+  text-align: center;
+  color: #360608c4;
+  font-size: small;
+
+}
+
+.metadata .category {
+  color: #db5661;
+  font-size: small;
+
+}
+
+.description {
+  font-size: smaller;
+}
+
+
+
+.text {
+  text-align: justify;
+  color: #e6cbcd;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  font-size: larger;
+
+}
+
+.parrafoDos {
+
+  text-align: justify;
+  color: #e6cbcd;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  font-size: x-large;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.parrafoTres {
+  text-align: justify;
+  color: #cccec8;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  font-size: x-large;
+  width: 100%;
+
+
+}
+
+
+/*Imagenes/Multimedia*/
+
+.ImgCarrusel {
+  height: 400px;
+
+}
+
+.imagenUno {
+  height: 100%;
+  width: 500px;
+  padding: 0.3rem;
+}
+
+.imagenDos {
+
+  height: 100%;
+  width: 800px;
+  padding: 0.3rem;
+
+
+}
+
+.video {
+
+  width: 80%;
+  height: 100%;
+}
+
+.FiltroTexto {
+  width: 50px;
+}
+
+ /* propiedades del details */
+
+.object{
+
+  object-fit: cover;
+  height: 100%;
+  
+}
+
+.abilities{
+
+  width: 5vw;
+  height: 5vh;
+  
+
+}
+
+.border-3d {
+  border: 10px solid rgba(0, 0, 0, 0.2); /* Color y grosor del borde sombreado */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Sombra en 3D */
+}
+
+
